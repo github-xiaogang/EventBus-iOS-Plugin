@@ -1,28 +1,34 @@
 EventBus-iOS-Plugin
 ===================
 
-a Xcode plugin for another repository (EventBus-iOS)
+a Xcode plug-in for another repository (EventBus-iOS)
 
 
-插件安装：
+插件安装(install)：
 ===================
 
-  方法1：直接拷贝 EventBus-iOS.xcplugin 到 ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/
-  方法2：build target <EventBus-iOS> , done !
+  copy EventBus-iOS.xcplugin to ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/
+  
+  or build target <EventBus-iOS> , after build, Xcode will help you copy the plug-in product to that directory,
+  
+  then that you should restart Xcode ,let Xcode load the plug-in.
 
 使用：
 ===================
 
 
-按 <ctrl + e> 会列出所有发布过的事件。
+按 ctrl + e 会列出所有发布过的事件。
+
 1.选中其中一项，它会将eventName插入到代码中。
+
 2.选中时同时按ctrl ，它会帮你找到发布该事件的地方。
 
-useage:
+usage:
 ===================
 
-press <ctrl + e> to show all published event , then
--------------------
+press ctrl + e to show all published event , then
+
+
 1. when you select one item ,it will auto insert the selected eventName to your code.
 2. when you hold ctrl key ,then select one item ,it will help you find where this event was defined.
 
