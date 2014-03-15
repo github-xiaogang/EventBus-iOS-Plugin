@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C933ADF5-0CA0-445F-984B-DDDE5671F66D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EventBus-iOS-Plugin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E2758519-1C5A-4CC2-910C-C5F9EEA8FA25</key>
+		<string>https://github.com/github-xiaogang/EventBus-iOS-Plugin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EventBus-iOS-Plugin.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E2758519-1C5A-4CC2-910C-C5F9EEA8FA25</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/github-xiaogang/EventBus-iOS-Plugin.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E2758519-1C5A-4CC2-910C-C5F9EEA8FA25</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2758519-1C5A-4CC2-910C-C5F9EEA8FA25</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EventBus-iOS-Plugin</string>
+		</dict>
+	</array>
+</dict>
+</plist>
