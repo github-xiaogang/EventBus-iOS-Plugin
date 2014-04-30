@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1F024B5618D2CF3C00FCCE47"
                BuildableName = "EventBusTest.app"
                BlueprintName = "EventBusTest"
-               ReferencedContainer = "container:EventBusPlugin.xcodeproj">
+               ReferencedContainer = "container:EventBus-iOS-Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F024B7018D2CF3C00FCCE47"
-               BuildableName = "EventBusTestTests.xctest"
-               BlueprintName = "EventBusTestTests"
-               ReferencedContainer = "container:EventBusPlugin.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -45,7 +35,7 @@
             BlueprintIdentifier = "1F024B5618D2CF3C00FCCE47"
             BuildableName = "EventBusTest.app"
             BlueprintName = "EventBusTest"
-            ReferencedContainer = "container:EventBusPlugin.xcodeproj">
+            ReferencedContainer = "container:EventBus-iOS-Plugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +54,7 @@
             BlueprintIdentifier = "1F024B5618D2CF3C00FCCE47"
             BuildableName = "EventBusTest.app"
             BlueprintName = "EventBusTest"
-            ReferencedContainer = "container:EventBusPlugin.xcodeproj">
+            ReferencedContainer = "container:EventBus-iOS-Plugin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +72,7 @@
             BlueprintIdentifier = "1F024B5618D2CF3C00FCCE47"
             BuildableName = "EventBusTest.app"
             BlueprintName = "EventBusTest"
-            ReferencedContainer = "container:EventBusPlugin.xcodeproj">
+            ReferencedContainer = "container:EventBus-iOS-Plugin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

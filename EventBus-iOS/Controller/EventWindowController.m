@@ -37,11 +37,34 @@
     _excludeFileNames = @[@"EventBus.h",@"EventBus.m",@"EventPublisher.h",@"EventSubscriber.h"];
 }
 
+//reload data when become main
+- (void)windowDidBecomeMain:(NSNotification *)notification
+{
+    [_searchTextfield becomeFirstResponder];
+    if(_list){
+        [_tableview reloadData];
+    }
+    [self reloadData];
+}
+
+//close window
+- (void)windowDidResignMain:(NSNotification *)notification
+{
+    _searchTextfield.stringValue = @"";
+    [self.window close];
+}
+
 - (void)reloadData
 {
-    [self loadData];
-    [self cookForShow];
-    [_tableview reloadData];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self loadData];
+        [self cookForShow];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            if([self.window isVisible]){
+                [_tableview reloadData];
+            }
+        });
+    });
 }
 
 - (void)cookForShow
@@ -128,19 +151,6 @@
     [_tableview reloadData];
 }
 
-//reload data when become main
-- (void)windowDidBecomeMain:(NSNotification *)notification
-{
-    [_searchTextfield becomeFirstResponder];
-    [self reloadData];
-}
-
-//close window
-- (void)windowDidResignMain:(NSNotification *)notification
-{
-    [self.window close];
-}
-
 #pragma mark -----------------   load data   ----------------
 
 - (void)setProjectPath:(NSString *)projectPath
@@ -159,7 +169,9 @@
     if(self.projectPath.length > 0){
         [self findItemsWithPath:self.projectPath];
     }else{
-        [self showOpenPanel];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self showOpenPanel];
+        });
     }
 }
 
@@ -178,7 +190,6 @@
     data = [file readDataToEndOfFile];
     NSString *string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
     NSArray *results=[string componentsSeparatedByString:@"\n"];
-    //    NSLog(@"result: %@",results);
     // parse event declare
     NSArray * declareList = [self parseEventDeclare:results];
     _eventDeclareList = declareList;
@@ -363,7 +374,7 @@
                     //EVENT_PUBLISH_WITHDATA(self, @"eventName", nil);
                     actionStr = [actionStr stringByReplacingOccurrencesOfRegex:@"EVENT_PUBLISH_WITHDATA *\\([^,]+, *" withString:@""];
                     //@"eventName", nil)
-                    actionStr = [actionStr stringByReplacingOccurrencesOfRegex:@" *,.+\\)" withString:@""];
+                    actionStr = [actionStr stringByReplacingOccurrencesOfRegex:@" *,.+?\\)" withString:@""];
                     //@"eventName" / _textfield.text
                     actionStr = [actionStr stringByReplacingOccurrencesOfString:@"@\"" withString:@""];
                     actionStr = [actionStr stringByReplacingOccurrencesOfString:@"\"" withString:@""];

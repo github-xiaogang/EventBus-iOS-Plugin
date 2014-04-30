@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1F907EF218D2AB8100BF7A68"
                BuildableName = "EventBus-iOS.xcplugin"
                BlueprintName = "EventBus-iOS"
-               ReferencedContainer = "container:EventBusPlugin.xcodeproj">
+               ReferencedContainer = "container:EventBus-iOS-Plugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
