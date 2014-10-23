@@ -27,7 +27,7 @@
     // Insert code here to initialize your application
     _eventWindowController = [[EventWindowController alloc] initWithWindowNibName:@"EventWindowController"];
     // set your project path here (full path)
-    NSString *projectPath = nil;
+    NSString *projectPath = @"/Users/zhang/github/EventBus-iOS-Plugin";
     NSAssert(projectPath, @"please set projectPath");
     [_eventWindowController setProjectPath:projectPath];
     [_eventWindowController.window makeKeyAndOrderFront:nil];

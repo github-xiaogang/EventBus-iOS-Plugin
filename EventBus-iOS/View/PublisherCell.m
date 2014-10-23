@@ -26,7 +26,7 @@ NSString * const PublisherCellId = @"PulisherCellId";
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [_backgroudView setWantsLayer:YES];
+    [_backgroudView setWantsLayer:YES]; //动画
     _backgroudView.layer.backgroundColor = [[NSColor lightGrayColor] CGColor];
     [_backgroudView setAlphaValue:0.0f];
 }
